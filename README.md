@@ -1,4 +1,3 @@
-Oké, itt a teljes, frissített README.md verzió, amiben a Python 3.11 a minimum, és kiemeltem, hogy fogadsz javításokat és segítséget. Az említés többször is szerepel, ahogy kérted:
 
 # Secure Messaging
 
@@ -22,13 +21,14 @@ If you have ideas or corrections, feel free to submit them — **your contributi
 
 ## ✨ Features
 
-- 🔑 **Post-Quantum Key Exchange** using Kyber  
-- 🖊️ **Digital Signatures** using Dilithium  
+- 🔑 **Post-Quantum Key Exchange** using Kyber and ECDH - will resolve a 90 bytes long hybrid key
+- 🖊️ **Digital Signatures** using Dilithium and ed25519 -will resolve a hybrid authicantion
+- TLS1.3 authentication
 - 🔒 **Multiple symmetric encryption layers:**
   - AES (Advanced Encryption Standard)
   - ChaCha20
   - Serpent Cipher
-  - Experimental Qubit Simulation Layer  
+  - OTP- xor
 - 🖥️ Simple GUI interface for sending/receiving messages  
 - 📂 Modular encryption layers for experimentation  
 - 🖼️ Includes a custom application icon (`lock.ico`)
@@ -40,107 +40,18 @@ If you have ideas or corrections, feel free to submit them — **your contributi
 ### Requirements
 - **Python 3.11+**  
 - Recommended OS: Windows / Linux / macOS  
-- Virtual environment (optional but recommended)  
-
 **💡 Contributions & Fixes:** If you find any issues during installation, feel free to open a pull request or submit a bug report. **Your help improves this project!**
 
-### Steps
-```bash
-# 1. Clone or extract the repository
-git clone https://github.com/yourusername/Secure-messaging.git
-cd Secure-messaging
+## Installiton 
+-You can either install it from relasese or build it with pyinstaller
 
-# 2. (Optional) Create virtual environment
-python -m venv venv
-source venv/bin/activate   # Linux/macOS
-venv\Scripts\activate      # Windows
+## Setup:
 
-# 3. Install dependencies
-pip install -r requirements.txt
-
-
----
-
-▶️ Usage
-
-1. Start the server:
-
-
-
-python encryption.py --server
-
-2. Start the client:
-
-
-
-python encryption.py --client
-
-3. Use the GUI window to:
-
-
-
-Enter your message
-
-Press Send to transmit it securely
-
-View incoming messages in real-time
-
-
-💡 Contributions & Suggestions: If you have improvements to the GUI or features, submit them — all contributions are welcome!
-
-
----
-
-🔐 Security Design Overview
-
-Secure Messaging is built with multi-layer defense in depth:
-
-Post-Quantum Security
-
-Uses Kyber for key exchange and Dilithium for digital signatures.
-
-Resistant against future quantum attacks.
-
-
-Symmetric Encryption Layers
-
-Messages are encrypted with AES, ChaCha20, Serpent, and an experimental Qubit simulation layer.
-
-Even if one algorithm is compromised, multiple independent layers still protect the message.
-
-
-Transport Recommendations
-
-Should only be used in local networks or over a VPN.
-⚠️ Never expose this application with port forwarding or to the public internet.
-
-
-
----
-
-⚠️ Limitations
-
-Not optimized for large-scale usage.
-
-Experimental QubitLayer is not real quantum encryption.
-
-Performance overhead due to multiple encryption layers.
-
-For educational and testing purposes only.
-
-
-
----
-
-📜 License
-
-This project is provided as-is without warranty.
-Free to use, modify, and study for research and learning purposes.
-
-💡 Your contributions, fixes, and suggestions are welcome!
-Submitting improvements helps this project grow and ensures it remains a useful educational resource.
-
-Ha akarod, készíthetek belőle egy **.txt verziót** is, amit közvetlenül be tudsz másolni GitHubra, hogy ne kelljen `.md` formátummal vacakolni.  
-
-Szeretnéd, hogy elkészítsem a `.txt` verziót is?
-
+-- Run the .exe, itt will take a litlle time to the application to start, and generate all its files!
+   I recommend making an new folder becouse fo the config files!
+-- This application will need a minimum of 700 megabites of space
+-- For this to work with two peers they will need to share some files witch either of them needs to generates!
+   I recommend sharing them only with phiscal connection (pendrive, cabel, etc..) never in network or cloud becouse it will defeat the whole point of the code
+   Once the application is running close it and copy the folder to the other device with a pendrive!
+   then the copy the public 
+   
